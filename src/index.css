@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  border-left: 5px white solid;
+}
+nav div a,
+nav div li {
+  padding: 10px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+nav div a svg,
+nav div li svg {
+  margin-right: 10px;
+}
+.form form label {
+  display: block;
+  margin-bottom: 3px;
+}
+.form form input {
+  border: 2px lightblue solid;
+  padding: 4px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.joinBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+.joinBtn::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d0d3cc;
+  transition: 0.4s;
+}
+.joinBtn:hover::before {
+  top: 0;
+}
+.partners {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(346px, 346px));
+  grid-gap: 10px;
+}
+.partner {
+  transform: translateY(20px);
+  opacity: 0.5;
+  animation: moveup 0.2s forwards linear;
+}
+@keyframes moveup {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.project h1 {
+  position: absolute;
+  transform: translateX(30vw);
+  animation: moving 4s linear infinite;
+}
+@keyframes moving {
+  0% {
+    transform: translateX(30vw);
+  }
+  25% {
+    transform: translateX(55vw) translateY(40vh);
+  }
+  50% {
+    transform: translateX(30vw) translateY(90vh);
+  }
+  75% {
+    transform: translateX(0vw) translateY(50vh);
+  }
+
+  100% {
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .active {
+    border-left: none;
+  }
+}
