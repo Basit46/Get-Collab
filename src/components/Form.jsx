@@ -46,6 +46,7 @@ const Form = () => {
       }).then(() => {
         setError("");
         navigate("/collabs");
+        alert("Profile Created Successfully, Refresh to view updated profile");
       });
     }
   };
