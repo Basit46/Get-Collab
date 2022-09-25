@@ -43,11 +43,15 @@ const Form = () => {
         name: nameRef.current.value,
         status: true,
         userId: userDetails.uid,
-      }).then(() => {
-        setError("");
-        navigate("/collabs");
-        alert("Profile Created Successfully, Refresh to view updated profile");
-      });
+      })
+        .then(() => {
+          setError("");
+          navigate("/collabs");
+          alert(
+            "Profile Created Successfully, Refresh to view updated profile"
+          );
+        })
+        .then(() => {});
     }
   };
 
