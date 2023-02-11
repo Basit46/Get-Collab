@@ -53,7 +53,7 @@ const Navbar = () => {
           Login
         </NavLink>
         <li
-          className="flex items-center list-none"
+          className="flex items-center list-none cursor-pointer"
           onClick={() => {
             signOut(auth).then(() => {
               setUserDetails("");

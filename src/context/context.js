@@ -72,7 +72,7 @@ export const OurProvider = ({ children }) => {
     }).then(() => {
       console.log(id);
       console.log(currentStatus);
-      alert("Done, Refresh page to view new status");
+      window.reload();
     });
   };
 

@@ -36,22 +36,8 @@ function App() {
       <div className="w-[100%] md:w-[80%]">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route
-            path="collabs"
-            element={
-              <RequireAuth>
-                <Collabs />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="projects"
-            element={
-              <RequireAuth>
-                <Projects />
-              </RequireAuth>
-            }
-          />
+          <Route path="collabs" element={<Collabs />} />
+          <Route path="projects" element={<Projects />} />
           <Route
             path="profile"
             element={
